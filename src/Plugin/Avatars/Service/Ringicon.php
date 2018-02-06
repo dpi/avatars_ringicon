@@ -19,6 +19,7 @@ class Ringicon extends AvatarKitCommonService {
       // @todo rework this, let ak handle creating a file same as remote.
       // file_save_data does not give it proper extension + directory.
       $data = file_get_contents($uri);
+      // @todo Mime and filename need to be set.
       $file = file_save_data($data);
       return $file->getFileUri();
     }
